@@ -1,0 +1,36 @@
+CACHE MANIFEST
+# 2017-02-24 v1.0.2
+/Scripts/eDairyScripts/Module.js
+/Scripts/eDairyScripts/HomePageController.js
+/Scripts/eDairyScripts/HomePageServices.js
+/Scripts/eDairyScripts/StoreFrontOperationController.js
+/Scripts/eDairyScripts/StoreFrontOperationServices.js
+/Scripts/eDairyScripts/CustomerAccountServices.js
+/Scripts/eDairyScripts/CustomerAccountController.js
+/Scripts/eDairyScripts/Validation/Validation.js
+/Scripts/eDairyScripts/SearchResultsServices.js
+/Scripts/eDairyScripts/SearchResultsController.js
+/Scripts/eDairyScripts/ProductViewServices.js
+/Scripts/eDairyScripts/ProductViewController.js
+/Scripts/eDairyScripts/ContactUsController.js
+/Scripts/eDairyScripts/ContactUsServices.js
+/Scripts/eDairyScripts/PartnerServices.js
+/Scripts/eDairyScripts/PartnerController.js
+/Scripts/eDairyScripts/ShoppingCartServices.js
+/Scripts/eDairyScripts/ShoppingCartController.js
+/Scripts/eDairyScripts/PaymentServices.js
+/Scripts/eDairyScripts/PaymentController.js
+/Styles/HomePage.css
+/Styles/Theme1.css
+/Styles/Theme2.css
+/Styles/Theme3.css
+/Styles/Theme4.css
+/Styles/Theme5.css
+/offline.html
+/Images/login_background.jpg
+
+NETWORK:
+*
+
+FALLBACK:
+/html/ /offline.html

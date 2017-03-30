@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9E760895-7D3B-4C25-8B6D-FB96834D1793}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eDiaryWebForms</RootNamespace>
+    <AssemblyName>eDiaryWebForms</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.1\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="HomePage.aspx" />
+    <Content Include="Home\Home.aspx" />
+    <Content Include="Images\Banner\banner_05.jpg" />
+    <Content Include="Images\Banner\banner_05_old.jpg" />
+    <Content Include="Images\Banner\banner_05_old2.jpg" />
+    <Content Include="Images\Banner\eDairy.png" />
+    <Content Include="Images\Banner\eDairy2.png" />
+    <Content Include="Images\Banner\eDairy_new.png" />
+    <Content Include="Images\delete.jpg" />
+    <Content Include="Images\EDairyLogo.png" />
+    <Content Include="Images\EDairyLogo1.png" />
+    <Content Include="Images\EDairyProducts\bannerimage1.png" />
+    <Content Include="Images\EDairyProducts\bannerimage2.1.png" />
+    <Content Include="Images\EDairyProducts\bannerimage2.png" />
+    <Content Include="Images\EDairyProducts\eDairy - Banner1.png" />
+    <Content Include="Images\EDairyProducts\eDairy - Banner2.png" />
+    <Content Include="Images\EDairyProducts\eDairy - Banner3.png" />
+    <Content Include="Images\EDairyProducts\eDairy - Banner4.png" />
+    <Content Include="Images\EDairyProducts\eDairy - Banner5.png" />
+    <Content Include="Images\EDairyProducts\Mysore pak_0.png" />
+    <Content Include="Images\EDairyProducts\Nandini-Assorted-Gift-Box-b.png" />
+    <Content Include="Images\EDairyProducts\Nandini-Badam-Burfi.png" />
+    <Content Include="Images\EDairyProducts\Nandini-Besan-Ladoo-b.png" />
+    <Content Include="Images\EDairyProducts\Nandini-Bite-b_0.png" />
+    <Content Include="Images\EDairyProducts\Nandini-Cashew-Burfi-b_0.png" />
+    <Content Include="Images\EDairyProducts\Nandini-Chocolate-Burfi.png" />
+    <Content Include="Images\EDairyProducts\Nandini-Coconut-Burfi-b.png" />
+    <Content Include="Images\EDairyProducts\Nandini-Dharwad-Peda_1.png" />
+    <Content Include="Images\EDairyProducts\Nandini-Dry-Fruit-Burfi.png" />
+    <Content Include="Images\EDairyProducts\Nandini-Gulab-Jamoons-b_0.png" />
+    <Content Include="Images\EDairyProducts\Nandini-Milk-Peda_1.png" />
+    <Content Include="Images\EDairyProducts\NandiniButtermilk.png" />
+    <Content Include="Images\EDairyProducts\NandiniCurd.png" />
+    <Content Include="Images\EDairyProducts\NandiniDoubleTonedMilk.png" />
+    <Content Include="Images\EDairyProducts\NandiniHomogenisedCowMilk.png" />
+    <Content Include="Images\EDairyProducts\NandiniTonedMilk.png" />
+    <Content Include="Images\EDairyProducts\NandiniYoghurt.png" />
+    <Content Include="Images\EDairyProducts\Ready-to-eat-Jamoon-b_1.png" />
+    <Content Include="Images\EDairyProducts\Ready-to-eat-Rasogolla-b.png" />
+    <Content Include="Images\edit.jpg" />
+    <Content Include="Images\Farm-Animals-Wallpaper-HD.png" />
+    <Content Include="Images\IconsModernDesign\AvailableResources.png" />
+    <Content Include="Images\IconsModernDesign\dashboard.png" />
+    <Content Include="Images\IconsModernDesign\DisasterCoOrdConfirm.png" />
+    <Content Include="Images\IconsModernDesign\DisasterIncident.png" />
+    <Content Include="Images\IconsModernDesign\DisasterIncidentClosing.png" />
+    <Content Include="Images\IconsModernDesign\DisasterType.png" />
+    <Content Include="Images\IconsModernDesign\District.png" />
+    <Content Include="Images\IconsModernDesign\HumanlResourceOwner.png" />
+    <Content Include="Images\IconsModernDesign\junk\AlertsIcon.jpg" />
+    <Content Include="Images\IconsModernDesign\junk\AnalyticsIcon.png" />
+    <Content Include="Images\IconsModernDesign\junk\AuthorisationIcon.png" />
+    <Content Include="Images\IconsModernDesign\junk\AvailableResources.png" />
+    <Content Include="Images\IconsModernDesign\junk\claimsIcon.jpg" />
+    <Content Include="Images\IconsModernDesign\junk\ClinicalDisclipneIcon.png" />
+    <Content Include="Images\IconsModernDesign\junk\ComplaintFollowUpIcon.png" />
+    <Content Include="Images\IconsModernDesign\junk\ComplaintLogIcon.jpg" />
+    <Content Include="Images\IconsModernDesign\junk\DesignationIcon.png" />
+    <Content Include="Images\IconsModernDesign\junk\DisasterType.png" />
+    <Content Include="Images\IconsModernDesign\junk\DisasterType2.png" />
+    <Content Include="Images\IconsModernDesign\junk\District.png" />
+    <Content Include="Images\IconsModernDesign\junk\DistrictIcon.png" />
+    <Content Include="Images\IconsModernDesign\junk\ExistingPatientRegistrationIcon.png" />
+    <Content Include="Images\IconsModernDesign\junk\HospitalIcon.png" />
+    <Content Include="Images\IconsModernDesign\junk\HumanlResourceOwner.png" />
+    <Content Include="Images\IconsModernDesign\junk\JuniorDoctorIcon.jpg" />
+    <Content Include="Images\IconsModernDesign\junk\ListingIcon.png" />
+    <Content Include="Images\IconsModernDesign\junk\MaterialResourceOwner.png" />
+    <Content Include="Images\IconsModernDesign\junk\Mi_ReportsIcon.jpg" />
+    <Content Include="Images\IconsModernDesign\junk\NetworkIcon.jpg" />
+    <Content Include="Images\IconsModernDesign\junk\NewPatientRegistrationIcon.png" />
+    <Content Include="Images\IconsModernDesign\junk\PatientStatusIcon.png" />
+    <Content Include="Images\IconsModernDesign\junk\QualificationIcon.png" />
+    <Content Include="Images\IconsModernDesign\junk\Resource.png" />
+    <Content Include="Images\IconsModernDesign\junk\Resource_Category.png" />
+    <Content Include="Images\IconsModernDesign\junk\rhdoctor.png" />
+    <Content Include="Images\IconsModernDesign\junk\roleIcon.jpg" />
+    <Content Include="Images\IconsModernDesign\junk\SeniorDoctorIcon.jpg" />
+    <Content Include="Images\IconsModernDesign\junk\SHAssistantIcon.png" />
+    <Content Include="Images\IconsModernDesign\junk\SpecilizationIcon.png" />
+    <Content Include="Images\IconsModernDesign\junk\StaffIcon.png" />
+    <Content Include="Images\IconsModernDesign\junk\StateIcon.jpg" />
+    <Content Include="Images\IconsModernDesign\junk\Taluk.png" />
+    <Content Include="Images\IconsModernDesign\junk\TeamMember.png" />
+    <Content Include="Images\IconsModernDesign\junk\TeamTypes.png" />
+    <Content Include="Images\IconsModernDesign\junk\ThemeIcon.jpg" />
+    <Content Include="Images\IconsModernDesign\junk\UserIcon.jpg" />
+    <Content Include="Images\IconsModernDesign\junk\VendorIcon.jpg" />
+    <Content Include="Images\IconsModernDesign\junk\Village.png" />
+    <Content Include="Images\IconsModernDesign\livestreaming.png" />
+    <Content Include="Images\IconsModernDesign\MaterialResourceOwner.png" />
+    <Content Include="Images\IconsModernDesign\picsandvids.png" />
+    <Content Include="Images\IconsModernDesign\Query.png" />
+    <Content Include="Images\IconsModernDesign\Resource.png" />
+    <Content Include="Images\IconsModernDesign\ResourceConfirmation.png" />
+    <Content Include="Images\IconsModernDesign\Resource_Category.png" />
+    <Content Include="Images\IconsModernDesign\Skill.png" />
+    <Content Include="Images\IconsModernDesign\Taluk.png" />
+    <Content Include="Images\IconsModernDesign\TeamMember.png" />
+    <Content Include="Images\IconsModernDesign\TeamTypes.png" />
+    <Content Include="Images\IconsModernDesign\Village.png" />
+    <Content Include="Images\Loading.gif" />
+    <Content Include="Login.aspx" />
+    <Content Include="Orders\InvoiceCustomer.html" />
+    <Content Include="Orders\InvoiceStockiest.html" />
+    <Content Include="Orders\ManufacturerPO.html" />
+    <Content Include="Orders\PurchaseOrderByCustomer.html" />
+    <Content Include="Orders\PurchaseOrderByStockiest.html" />
+    <Content Include="Orders\vikas_global.gif" />
+    <Content Include="packages.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Account\Web.config" />
+    <Content Include="MasterPages\Home.Master" />
+    <Content Include="MasterPages\Masters.Master" />
+    <Content Include="MasterPages\Utilities.Master" />
+    <Content Include="MasterPages\Tasks.Master" />
+    <Content Include="fonts\OpenSans-Regular.ttf" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-3.1.1.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Site.Master" />
+    <Content Include="Styles\AjaxLoader\AjaxLoader.css" />
+    <Content Include="Styles\Alert\sweetalert.css" />
+    <Content Include="Styles\bootstrap\3.3.7\css\bootstrap.min.css" />
+    <Content Include="Styles\bootstrap\3.3.7\js\bootstrap.min.js" />
+    <Content Include="Styles\bootstrap\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Styles\bootstrap\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Styles\bootstrap\bootstrap\css\bootstrap.css" />
+    <Content Include="Styles\bootstrap\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Styles\bootstrap\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Styles\bootstrap\bootstrap\js\bootstrap.js" />
+    <Content Include="Styles\bootstrap\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Styles\bootstrap\bootstrap\js\npm.js" />
+    <Content Include="Styles\bootstrap\bootstrap\js\ui-bootstrap-tpls-2.0.1.js" />
+    <Content Include="Styles\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Styles\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Styles\bootstrap\css\bootstrap.css" />
+    <Content Include="Styles\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Styles\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Styles\bootstrap\js\bootstrap.js" />
+    <Content Include="Styles\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Styles\bootstrap\js\npm.js" />
+    <Content Include="Styles\bootstrap\js\ui-bootstrap-tpls-2.0.1.js" />
+    <Content Include="Styles\eDiary\HomePageStyle.css" />
+    <Content Include="Styles\eDiary\login.css" />
+    <Content Include="Styles\eDiary\Loginpage.css" />
+    <Content Include="Styles\eDiary\ModernIcons.css" />
+    <Content Include="Styles\eDiary\PicsNVidsStyle.css" />
+    <Content Include="Styles\eDiary\Reports.css" />
+    <Content Include="Styles\eDiary\search_box.css" />
+    <Content Include="Styles\eDiary\ValidationStyles.css" />
+    <Content Include="Styles\HomePage.css" />
+    <Content Include="Tasks\AccountApproved.aspx" />
+    <Content Include="Tasks\AccountManager.aspx" />
+    <Content Include="Tasks\AccountStockiestApproved.aspx" />
+    <Content Include="Tasks\AllocatedStockApproved.aspx" />
+    <Content Include="Tasks\CustomerWise.aspx" />
+    <Content Include="Tasks\Delivery.aspx" />
+    <Content Include="Tasks\DeliveryHistory.aspx" />
+    <Content Include="Tasks\POHistory.aspx" />
+    <Content Include="Tasks\SalesApproved.aspx" />
+    <Content Include="Tasks\SalesManager.aspx" />
+    <Content Include="Tasks\SalesStockiestApproved.aspx" />
+    <Content Include="Tasks\Shipping.aspx" />
+    <Content Include="Tasks\ShippingHistory.aspx" />
+    <Content Include="Tasks\StockAllocation.aspx" />
+    <Content Include="Tasks\WarehouseApproval.aspx" />
+    <Content Include="Tasks\WarehousePOManufacturer.aspx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="Styles\bootstrap\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Styles\bootstrap\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="Styles\bootstrap\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Styles\bootstrap\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Styles\bootstrap\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Styles\bootstrap\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Styles\bootstrap\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Styles\bootstrap\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Styles\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Styles\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="Styles\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Styles\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Styles\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Styles\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Styles\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Styles\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Masters.Master.cs">
+      <DependentUpon>Masters.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Masters.Master.designer.cs">
+      <DependentUpon>Masters.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Tasks.Master.cs">
+      <DependentUpon>Tasks.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Tasks.Master.designer.cs">
+      <DependentUpon>Tasks.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\Utilities.Master.cs">
+      <DependentUpon>Utilities.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\Utilities.Master.designer.cs">
+      <DependentUpon>Utilities.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="Tasks\AccountApproved.aspx.cs">
+      <DependentUpon>AccountApproved.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\AccountApproved.aspx.designer.cs">
+      <DependentUpon>AccountApproved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\AccountManager.aspx.cs">
+      <DependentUpon>AccountManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\AccountManager.aspx.designer.cs">
+      <DependentUpon>AccountManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\AccountStockiestApproved.aspx.cs">
+      <DependentUpon>AccountStockiestApproved.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\AccountStockiestApproved.aspx.designer.cs">
+      <DependentUpon>AccountStockiestApproved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\AllocatedStockApproved.aspx.cs">
+      <DependentUpon>AllocatedStockApproved.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\AllocatedStockApproved.aspx.designer.cs">
+      <DependentUpon>AllocatedStockApproved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\CustomerWise.aspx.cs">
+      <DependentUpon>CustomerWise.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\CustomerWise.aspx.designer.cs">
+      <DependentUpon>CustomerWise.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\Delivery.aspx.cs">
+      <DependentUpon>Delivery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\Delivery.aspx.designer.cs">
+      <DependentUpon>Delivery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\DeliveryHistory.aspx.cs">
+      <DependentUpon>DeliveryHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\DeliveryHistory.aspx.designer.cs">
+      <DependentUpon>DeliveryHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\POHistory.aspx.cs">
+      <DependentUpon>POHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\POHistory.aspx.designer.cs">
+      <DependentUpon>POHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\SalesApproved.aspx.cs">
+      <DependentUpon>SalesApproved.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\SalesApproved.aspx.designer.cs">
+      <DependentUpon>SalesApproved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\SalesManager.aspx.cs">
+      <DependentUpon>SalesManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\SalesManager.aspx.designer.cs">
+      <DependentUpon>SalesManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\SalesStockiestApproved.aspx.cs">
+      <DependentUpon>SalesStockiestApproved.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\SalesStockiestApproved.aspx.designer.cs">
+      <DependentUpon>SalesStockiestApproved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\Shipping.aspx.cs">
+      <DependentUpon>Shipping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\Shipping.aspx.designer.cs">
+      <DependentUpon>Shipping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\ShippingHistory.aspx.cs">
+      <DependentUpon>ShippingHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\ShippingHistory.aspx.designer.cs">
+      <DependentUpon>ShippingHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\StockAllocation.aspx.cs">
+      <DependentUpon>StockAllocation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\StockAllocation.aspx.designer.cs">
+      <DependentUpon>StockAllocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\WarehouseApproval.aspx.cs">
+      <DependentUpon>WarehouseApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\WarehouseApproval.aspx.designer.cs">
+      <DependentUpon>WarehouseApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tasks\WarehousePOManufacturer.aspx.cs">
+      <DependentUpon>WarehousePOManufacturer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tasks\WarehousePOManufacturer.aspx.designer.cs">
+      <DependentUpon>WarehousePOManufacturer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Masters\" />
+    <Folder Include="Utilities\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1411</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1411/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
